@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FDC957AC-0436-4DCB-8574-6AD80781BD6C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>8085Emulator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A35ABBFD7C69888A598A182C2B9DF26C48052D2F</key>
+		<string>https://github.com/jayahariv/8085-Emulator-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>8085Emulator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A35ABBFD7C69888A598A182C2B9DF26C48052D2F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jayahariv/8085-Emulator-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A35ABBFD7C69888A598A182C2B9DF26C48052D2F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A35ABBFD7C69888A598A182C2B9DF26C48052D2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>8085-Emulator-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
