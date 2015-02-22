@@ -331,7 +331,8 @@
 
 - (void)updateStorageValuesOnScreen {
     
-    NSString * paramater1ValueString = [NSString stringWithFormat:@"%@ -> %@", self.currentParameter1.title, self.currentParameter1.value.stringValue];
+    NSString * paramater1ValueString = [NSString stringWithFormat:@"%@ -> 0x%02x", self.currentParameter1.title, (unsigned int)[self.currentParameter1.value intValue]];
+    
     switch (self.currentParameter1.paramaterId.intValue) {
         case A_REGISTER_STORAGEID:
         {
@@ -405,7 +406,7 @@
             break;
     }
     
-    paramater1ValueString = [NSString stringWithFormat:@"%@ -> %@", self.currentParameter2.title, self.currentParameter2.value.stringValue];
+    paramater1ValueString = [NSString stringWithFormat:@"%@ -> 0x%02x", self.currentParameter2.title, (unsigned int)[self.currentParameter2.value intValue]];
     switch (self.currentParameter2.paramaterId.intValue) {
         case A_REGISTER_STORAGEID:
         {
