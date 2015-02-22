@@ -26,6 +26,7 @@
 		08B740551A97870C00B07613 /* _085EmulatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B740541A97870C00B07613 /* _085EmulatorTests.m */; };
 		08E2F48F1A99C9B90056ED1F /* Parameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E2F48E1A99C9B90056ED1F /* Parameter.m */; };
 		08E2F4911A99D7B30056ED1F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 08E2F4901A99D7B30056ED1F /* README.md */; };
+		08E2F4941A99D8750056ED1F /* iPhone screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E2F4931A99D8750056ED1F /* iPhone screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		08E2F48D1A99C9B90056ED1F /* Parameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameter.h; sourceTree = "<group>"; };
 		08E2F48E1A99C9B90056ED1F /* Parameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parameter.m; sourceTree = "<group>"; };
 		08E2F4901A99D7B30056ED1F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		08E2F4931A99D8750056ED1F /* iPhone screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone screenshot.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		08B7401D1A97870900B07613 = {
 			isa = PBXGroup;
 			children = (
+				08E2F4921A99D8750056ED1F /* Screenshots */,
 				08E2F4901A99D7B30056ED1F /* README.md */,
 				08B7402F1A97870B00B07613 /* 8085Emulator */,
 				08B7404E1A97870C00B07613 /* 8085EmulatorTests */,
@@ -183,6 +186,14 @@
 				08B740511A97870C00B07613 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08E2F4921A99D8750056ED1F /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				08E2F4931A99D8750056ED1F /* iPhone screenshot.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08B740421A97870C00B07613 /* Images.xcassets in Resources */,
+				08E2F4941A99D8750056ED1F /* iPhone screenshot.png in Resources */,
 				08B740341A97870B00B07613 /* InfoPlist.strings in Resources */,
 				08B7403D1A97870B00B07613 /* Main.storyboard in Resources */,
 			);
