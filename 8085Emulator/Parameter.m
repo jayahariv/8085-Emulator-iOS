@@ -10,4 +10,13 @@
 
 @implementation Parameter
 
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        _value = [NSNumber numberWithInt:0];
+    }
+    return self;
+}
+
 @end

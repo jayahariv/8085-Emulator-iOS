@@ -11,6 +11,7 @@
 #import "StorageModel.h"
 #import "InstructionModel.h"
 #import "ValueModel.h"
+#import "InstructionProcessor.h"
 
 @interface ViewController ()
 
@@ -77,34 +78,34 @@
     // create the list of storage items
     NSMutableArray * storageList = [[NSMutableArray alloc] init];
     
-    StorageModel * A_regster = [[StorageModel alloc] init:@"A Reg" storageId:A_REGISTER_STORAGEID];
+    StorageModel * A_regster = [[StorageModel alloc] init:@"A" storageId:A_REGISTER_STORAGEID];
     [storageList addObject:A_regster];
 
-    StorageModel * B_regster = [[StorageModel alloc] init:@"B Reg" storageId:B_REGISTER_STORAGEID];
+    StorageModel * B_regster = [[StorageModel alloc] init:@"B" storageId:B_REGISTER_STORAGEID];
     [storageList addObject:B_regster];
 
-    StorageModel * C_regster = [[StorageModel alloc] init:@"C Reg" storageId:C_REGISTER_STORAGEID];
+    StorageModel * C_regster = [[StorageModel alloc] init:@"C" storageId:C_REGISTER_STORAGEID];
     [storageList addObject:C_regster];
 
-    StorageModel * D_regster = [[StorageModel alloc] init:@"D Reg" storageId:D_REGISTER_STORAGEID];
+    StorageModel * D_regster = [[StorageModel alloc] init:@"D" storageId:D_REGISTER_STORAGEID];
     [storageList addObject:D_regster];
 
-    StorageModel * E_regster = [[StorageModel alloc] init:@"E Reg" storageId:E_REGISTER_STORAGEID];
+    StorageModel * E_regster = [[StorageModel alloc] init:@"E" storageId:E_REGISTER_STORAGEID];
     [storageList addObject:E_regster];
 
-    StorageModel * H_regster = [[StorageModel alloc] init:@"H Reg" storageId:H_REGISTER_STORAGEID];
+    StorageModel * H_regster = [[StorageModel alloc] init:@"H" storageId:H_REGISTER_STORAGEID];
     [storageList addObject:H_regster];
 
-    StorageModel * I_regster = [[StorageModel alloc] init:@"I Reg" storageId:I_REGISTER_STORAGEID];
+    StorageModel * I_regster = [[StorageModel alloc] init:@"I" storageId:I_REGISTER_STORAGEID];
     [storageList addObject:I_regster];
 
-    StorageModel * BC_regster = [[StorageModel alloc] init:@"BC Reg" storageId:BC_REGISTER_STORAGEID];
+    StorageModel * BC_regster = [[StorageModel alloc] init:@"BC" storageId:BC_REGISTER_STORAGEID];
     [storageList addObject:BC_regster];
 
-    StorageModel * DE_regster = [[StorageModel alloc] init:@"DE Reg" storageId:DE_REGISTER_STORAGEID];
+    StorageModel * DE_regster = [[StorageModel alloc] init:@"DE" storageId:DE_REGISTER_STORAGEID];
     [storageList addObject:DE_regster];
 
-    StorageModel * HI_regster = [[StorageModel alloc] init:@"HI Reg" storageId:HI_REGISTER_STORAGEID];
+    StorageModel * HI_regster = [[StorageModel alloc] init:@"HI" storageId:HI_REGISTER_STORAGEID];
     [storageList addObject:HI_regster];
 
     StorageModel * sp = [[StorageModel alloc] init:@"SP" storageId:SP_REGISTER_STORAGEID];
@@ -328,10 +329,191 @@
     }
 }
 
+- (void)updateStorageValuesOnScreen {
+    
+    NSString * paramater1ValueString = [NSString stringWithFormat:@"%@ -> %@", self.currentParameter1.title, self.currentParameter1.value.stringValue];
+    switch (self.currentParameter1.paramaterId.intValue) {
+        case A_REGISTER_STORAGEID:
+        {
+            self.A_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case B_REGISTER_STORAGEID:
+        {
+            self.B_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case C_REGISTER_STORAGEID:
+        {
+            self.C_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case D_REGISTER_STORAGEID:
+        {
+            self.D_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case E_REGISTER_STORAGEID:
+        {
+            self.E_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case H_REGISTER_STORAGEID:
+        {
+            self.H_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case I_REGISTER_STORAGEID:
+        {
+            self.I_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case BC_REGISTER_STORAGEID:
+        {
+            self.BC_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case DE_REGISTER_STORAGEID:
+        {
+            self.DE_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case HI_REGISTER_STORAGEID:
+        {
+            self.HI_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case SP_REGISTER_STORAGEID:
+        {
+            self.SP_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case PC_REGISTER_STORAGEID:
+        {
+            self.PC_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    paramater1ValueString = [NSString stringWithFormat:@"%@ -> %@", self.currentParameter2.title, self.currentParameter2.value.stringValue];
+    switch (self.currentParameter2.paramaterId.intValue) {
+        case A_REGISTER_STORAGEID:
+        {
+            self.A_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case B_REGISTER_STORAGEID:
+        {
+            self.B_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case C_REGISTER_STORAGEID:
+        {
+            self.C_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case D_REGISTER_STORAGEID:
+        {
+            self.D_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case E_REGISTER_STORAGEID:
+        {
+            self.E_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case H_REGISTER_STORAGEID:
+        {
+            self.H_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case I_REGISTER_STORAGEID:
+        {
+            self.I_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case BC_REGISTER_STORAGEID:
+        {
+            self.BC_Register_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case DE_REGISTER_STORAGEID:
+        {
+            self.DE_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case HI_REGISTER_STORAGEID:
+        {
+            self.HI_Register_Label.text = paramater1ValueString;
+        }
+            break;
+        case SP_REGISTER_STORAGEID:
+        {
+            self.SP_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        case PC_REGISTER_STORAGEID:
+        {
+            self.PC_Label.text = paramater1ValueString;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 #pragma mark - Button Actions
 - (IBAction)onTouchUpExecute:(id)sender {
     NSLog(@"Instruction: %@ %@, %@", self.currentInstruction.title, self.currentParameter1.title, self.currentParameter2.title);
-//    https://github.com/jayahariv/8085-Emulator-iOS.git
+    
+    switch (self.currentInstruction.instructionID.intValue) {
+        case MOV_INSTRUCTION_ID:
+        {
+            [InstructionProcessor MOV:self.currentParameter1 paramater2:self.currentParameter2];
+        }
+            break;
+            
+        case MVI_INSTRUCTION_ID: {
+            [InstructionProcessor MVI:self.currentParameter1 paramater2:self.currentParameter2];
+        }
+            break;
+            
+        case ADD_INSTRUCTION_ID: {
+            [InstructionProcessor ADD:self.currentParameter1 paramater2:self.currentParameter2];
+        }
+            break;
+            
+        case SUB_INSTRUCTION_ID: {
+            [InstructionProcessor SUB:self.currentParameter1 paramater2:self.currentParameter2];
+        }
+            break;
+            
+        case MUL_INSTRUCTION_ID: {
+            [InstructionProcessor MUL:self.currentParameter1 paramater2:self.currentParameter2];
+        }
+            break;
+        default:
+            break;
+    }
+    [self updateStorageValuesOnScreen];
 }
 
 

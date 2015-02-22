@@ -11,8 +11,6 @@
 
 @interface ValueModel : Parameter
 
-@property (nonatomic, strong) NSNumber * value;
-
 - (id)init:(int)valueInt;
 
 @end

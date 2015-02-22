@@ -11,10 +11,6 @@
 
 @interface StorageModel : Parameter
 
-
-@property (nonatomic, strong) NSNumber * storageID;
-
-
 - (id)init:(NSString*)title storageId:(int)storageId;
 
 @end

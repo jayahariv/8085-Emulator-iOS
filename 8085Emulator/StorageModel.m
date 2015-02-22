@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self.title = title;
-        _storageID = [NSNumber numberWithInt:storageId];
+        self.paramaterId = [NSNumber numberWithInt:storageId];
         self.isStorage = YES;
     }
     return self;

@@ -13,9 +13,9 @@
 - (id)init:(int)valueInt {
     self = [super init];
     if (self) {
-        _value = [NSNumber numberWithInt:valueInt];
+        self.value = [NSNumber numberWithInt:valueInt];
         self.isStorage = NO;
-        self.title = [NSString stringWithFormat:@"0x%02x", (unsigned int)[_value intValue]];
+        self.title = [NSString stringWithFormat:@"0x%02x", (unsigned int)[self.value intValue]];
     }
     return self;
 }

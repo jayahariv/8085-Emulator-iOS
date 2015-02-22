@@ -27,6 +27,7 @@
 		08E2F48F1A99C9B90056ED1F /* Parameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E2F48E1A99C9B90056ED1F /* Parameter.m */; };
 		08E2F4911A99D7B30056ED1F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 08E2F4901A99D7B30056ED1F /* README.md */; };
 		08E2F4941A99D8750056ED1F /* iPhone screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 08E2F4931A99D8750056ED1F /* iPhone screenshot.png */; };
+		08E2F4971A99D96E0056ED1F /* InstructionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E2F4961A99D96E0056ED1F /* InstructionProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		08E2F48E1A99C9B90056ED1F /* Parameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parameter.m; sourceTree = "<group>"; };
 		08E2F4901A99D7B30056ED1F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		08E2F4931A99D8750056ED1F /* iPhone screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone screenshot.png"; sourceTree = "<group>"; };
+		08E2F4951A99D96E0056ED1F /* InstructionProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionProcessor.h; sourceTree = "<group>"; };
+		08E2F4961A99D96E0056ED1F /* InstructionProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				08B7403F1A97870B00B07613 /* ViewController.m */,
 				08B740411A97870C00B07613 /* Images.xcassets */,
 				08B740301A97870B00B07613 /* Supporting Files */,
+				08E2F4951A99D96E0056ED1F /* InstructionProcessor.h */,
+				08E2F4961A99D96E0056ED1F /* InstructionProcessor.m */,
 			);
 			path = 8085Emulator;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				08921A7E1A9845C100671F02 /* ValueModel.m in Sources */,
 				08921A7B1A9845B100671F02 /* InstructionModel.m in Sources */,
 				08E2F4911A99D7B30056ED1F /* README.md in Sources */,
+				08E2F4971A99D96E0056ED1F /* InstructionProcessor.m in Sources */,
 				08921A781A9845A100671F02 /* StorageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
